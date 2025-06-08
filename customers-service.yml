@@ -22,3 +22,12 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
